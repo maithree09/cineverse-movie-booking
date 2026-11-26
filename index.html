@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CINEVERSE | Book Your Movie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">CINE<span>VERSE</span></div>
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#movies">Movies</a>
+            <a href="#booking">Book Tickets</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="eyebrow">YOUR CINEMA EXPERIENCE</p>
+            <h1>Experience the magic<br>of <span>Cinema.</span></h1>
+            <p>Discover the latest Tamil blockbusters. Choose your movie, pick your seats and book your tickets.</p>
+            <a href="#movies" class="hero-btn">Explore Movies</a>
+        </div>
+
+        <div class="hero-visual">
+            <div class="hero-card">
+                <span>NOW SHOWING</span>
+                <h2>BIG SCREEN.<br>BIG EXPERIENCES.</h2>
+                <p>Lights. Camera. Action.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="movies-section" id="movies">
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">FIND YOUR NEXT FAVOURITE</p>
+                <h2>Now Showing</h2>
+            </div>
+            <input type="text" id="searchInput" placeholder="Search movies...">
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" data-genre="All">All</button>
+            <button class="filter-btn" data-genre="Action">Action</button>
+            <button class="filter-btn" data-genre="Drama">Drama</button>
+            <button class="filter-btn" data-genre="Thriller">Thriller</button>
+        </div>
+
+        <div class="movie-grid" id="movieGrid"></div>
+    </section>
+
+    <section class="booking-section" id="booking">
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">MAKE IT A MOVIE NIGHT</p>
+                <h2>Book Your Seats</h2>
+            </div>
+        </div>
+
+        <div class="booking-layout">
+            <div class="booking-controls">
+                <label>Select Movie</label>
+                <select id="movieSelect">
+                    <option value="">Choose a movie</option>
+                </select>
+
+                <label>Select Date</label>
+                <input type="date" id="dateSelect">
+
+                <label>Select Showtime</label>
+                <div class="showtimes">
+                    <button class="time-btn" data-time="10:00 AM">10:00 AM</button>
+                    <button class="time-btn" data-time="1:30 PM">1:30 PM</button>
+                    <button class="time-btn" data-time="6:00 PM">6:00 PM</button>
+                    <button class="time-btn" data-time="9:30 PM">9:30 PM</button>
+                </div>
+
+                <h3>Select Your Seats</h3>
+                <div class="screen">SCREEN THIS WAY</div>
+                <div class="seat-grid" id="seatGrid"></div>
+
+                <div class="seat-legend">
+                    <span>Available</span>
+                    <span>Selected</span>
+                    <span>Occupied</span>
+                </div>
+            </div>
+
+            <div class="booking-summary">
+                <h3>Booking Summary</h3>
+                <p>Movie: <span id="summaryMovie">Not selected</span></p>
+                <p>Date: <span id="summaryDate">Not selected</span></p>
+                <p>Time: <span id="summaryTime">Not selected</span></p>
+                <p>Seats: <span id="summarySeats">None</span></p>
+
+                <div class="total">
+                    <span>Total</span>
+                    <h2 id="totalPrice">₹0</h2>
+                </div>
+
+                <button id="confirmBooking" class="confirm-btn">Confirm Booking</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="confirmationModal">
+        <div class="modal-content">
+            <h2>Booking Confirmed!</h2>
+            <p id="confirmationDetails"></p>
+            <button id="closeModal">Done</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="logo">CINE<span>VERSE</span></div>
+        <p>Where every frame tells a story.</p>
+        <p>© 2026 CINEVERSE. Demo project.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
